@@ -1,7 +1,8 @@
-const rotate = (letter, shift) => (/[a-zA-Z]/).test(letter) ? String.fromCharCode((((letter.charCodeAt(0) - 65) + shift) % 26) + 65) : " "
-const encode = (word, shift) => [...word.toUpperCase()].map(ltr => rotate(ltr, shift)).join("");
-const decode = (word, shift) => [...word.toUpperCase()].map(ltr => rotate(ltr, 26 - shift)).join("");
-const solve = (word, maxShift) => [...Array(maxShift)].forEach((_, i) => console.log(`Shift: ${i} ${decode(word, i)}`));
+const rotate = (letter, shift) => (/[a-zA-Z]/).test(letter) ? String.fromCharCode((((letter.charCodeAt(0) - 65) + shift) % 26) + 65) : letter;
+const encrypt = (word, shift) => word.toUpperCase().split("").map(ltr => rotate(ltr, shift)).join("");
+const decrypt = (word, shift) => encrypt(word, 26 - shift);
+const solve = (word, maxShift) => [...Array(maxShift)].forEach((_, i) => console.log(`Shift: ${i}\t${decrypt(word, i)}`));
 
-console.log(encode("Word", 3))
-solve("ABCDEFGHIJKLMNOPQRSTUVWXYZ", 26)
+console.log(encrypt("ATTACK AT ONCE", 4))
+console.log(decrypt("EXXEGO EX SRGI", 4))
+solve("abcdeFGHIJKLmnopqrstuvwxyz ,?;{[()]}", 26)
