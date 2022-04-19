@@ -11,9 +11,7 @@ Dear Diary
 ## Caesar Implementation
 
 ```
-| Date | Hours Spent | Accomplishments                         |
-| ---- | ----------- | --------------------------------------- |
-| x/yy | 0.5         | Set up dev env, including VSCode plugin |
+
 ```
 
 ### Output
