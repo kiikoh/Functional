@@ -1,6 +1,9 @@
 ;; sbcl --script caesar.lisp
-(defun rot (char shift)
-	(code-char (+ (mod (+ shift (- (char-code char) 65)) 26) 65))
+(defun rot (chr shift)
+	(if (and (>= (char-code chr) 65) (<= (char-code chr) 90))
+		(code-char (+ (mod (+ shift (- (char-code chr) 65)) 26) 65))
+		(code-char (char-code chr))
+	)
 )
 
 (defun encrypt (word shift)
@@ -17,8 +20,8 @@
 	))
 )
 
-(print (decrypt "ibm" 1))
-(print (encrypt "hal" 1))
-(print (solve "hal" 26))
+(print (encrypt "Attack at Once" 4))
+(print (decrypt "EXXEGO EX SRGI" 4))
+(print (solve "abcdeFGHIJKLmnopqrstuvwxyz ,?;{[()]}" 26))
 
 ;2 hours
