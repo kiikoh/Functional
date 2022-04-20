@@ -70,7 +70,7 @@ People love to hate on javascript but I find it the most applicable language by 
 
 ## Ratings
 
-Readability: 8/10
+Readability: 7/10
 
 Writability: 8/10
 
