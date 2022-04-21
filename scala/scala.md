@@ -98,3 +98,11 @@ Readability: 8/10
 Writability: 7/10
 
 Ranking: 2/5
+
+# Rankings
+
+1. JavaScript
+2. Scala
+3. ML
+4. Erlang
+5. Lisp
