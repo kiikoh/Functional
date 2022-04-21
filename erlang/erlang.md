@@ -101,6 +101,6 @@ In general, Erlang is a pretty good language. I would never use it though becaus
 
 Readability: 7/10
 
-Writability: 6/10
+Writability: 4/10
 
 Ranking: 3/5
