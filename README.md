@@ -1,6 +1,6 @@
 # Functional Programming
 
-This assignemnt was to use 5 different functional programming languages.
+This assignment was to use 5 different functional programming languages.
 
 The 5 languages were
 - Lisp
